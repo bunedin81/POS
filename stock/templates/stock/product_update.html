@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Update</title>
+</head>
+<body>
+    <form action="{%  url 'product-update' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{ form.instance.id }}"/>
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
